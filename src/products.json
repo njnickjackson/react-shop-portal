@@ -1,0 +1,52 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "productName": "Macbook Pro",
+        "description": "2021 Macbook Pro Brand New",
+        "isUsed": false,
+        "price": 2500,
+        "imageUrl": "./images/macbook-pro.jpg"
+      },
+      {
+        "id": 2,
+        "productName": "iPad Pro",
+        "description": "2021 iPad Pro Brand New",
+        "isUsed": false,
+        "price": 1200,
+        "imageUrl": "./images/ipad-pro.jpg"
+      },
+      {
+        "id": 3,
+        "productName": "Xbox One",
+        "description": "Gently Used Xbox One Elite",
+        "isUsed": true,
+        "price": 150,
+        "imageUrl": "./images/xbox-one.jpg"
+      },
+      {
+        "id": 4,
+        "productName": "2020 Dodge Challenger",
+        "description": "2020 Dodge Challenger (15,354 miles)",
+        "isUsed": true,
+        "price": 40000,
+        "imageUrl": "./images/dodge-challenger.jpg"
+      },
+      {
+        "id": 5,
+        "productName": "Pioneer DJ Mixer",
+        "description": "Premium Pioneer DJ Mixer Brand New",
+        "isUsed": false,
+        "price": 800,
+        "imageUrl": "./images/dj-mixer.jpg"
+      },
+      {
+        "id": 6,
+        "productName": "Nintendo Switch",
+        "description": "Gently Used OLED Nintendo Switch",
+        "isUsed": true,
+        "price": 275,
+        "imageUrl": "./images/nintendo-switch.jpg"
+      }
+    ]
+  }
