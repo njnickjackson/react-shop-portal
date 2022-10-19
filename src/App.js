@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './Home';
 import About from './About';
 import ViewAll from './ViewAll';
+import NewProduct from './NewProduct';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SampleItems from './SampleItems';
 
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<SampleItems />}/>
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<ViewAll />} />
+          <Route path="/add" element={<NewProduct />} />
         </Route>
         <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
