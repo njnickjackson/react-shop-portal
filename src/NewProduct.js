@@ -44,7 +44,7 @@ function NewProduct() {
   function handleSubmit(event) {
     event.preventDefault()
     addOrUpdate().then((product) =>
-        navigate(`/products/${product.id}`)
+        navigate(`/products`)
       )
   }
 
