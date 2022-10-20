@@ -19,7 +19,7 @@ function ViewAll(props) {
                     </Card.Text>
                     <div className='buttons'>
                         <Link className="btn btn-secondary">View</Link>
-                        <Link className="btn btn-primary mx-3">Edit</Link>
+                        <Link to={`../edit/${product.id}`} className="btn btn-primary mx-3">Edit</Link>
                         <Button className='custom-btn' variant="danger">Delete</Button>
                     </div>
                 </Card.Body>

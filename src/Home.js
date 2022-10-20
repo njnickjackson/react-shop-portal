@@ -13,9 +13,9 @@ function Home() {
             </Nav>
             <Nav>
               <Link to="/" className="nav-link">Home</Link>
-              <Link to="/about" className="nav-link">About Us</Link>
-              <Link to="/products" className="nav-link">View All</Link>
-              <Link to="/add" className="nav-link">Create</Link>
+              <Link to="about" className="nav-link">About Us</Link>
+              <Link to="products" className="nav-link">View All</Link>
+              <Link to="add" className="nav-link">Create</Link>
               <Form>
                   <Form.Control
                     type="search"
