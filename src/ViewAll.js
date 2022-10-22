@@ -1,10 +1,11 @@
 import React, {useContext} from 'react';
 import { Col, Row, Button, Card, CardGroup } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, Outlet, useParams } from 'react-router-dom';
 import { ProductContext } from './ProductContext';
 import './css/SampleItems.css';
 
 function ViewAll(props) {
+    let params = useParams()
     let { deleteProduct } = useContext(ProductContext)
 
     function handleDeleteProduct(id) {
@@ -13,15 +14,16 @@ function ViewAll(props) {
 
     function sampleList(products) {
       if (products === null) return
+      if (params.productId !== undefined) return
       return products.map((product) => 
       <Col md={4}>
         <Card className='m-2'>
                 <Card.Body>
                     <Card.Img className='sample-images' src={require(`${product.imageUrl}`)} />
                     <Card.Title>{product.productName}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Subtitle>
+                    <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Text>
                     <div className='buttons'>
-                        <Link className="btn btn-secondary">View</Link>
+                        <Link to={`/products/${product.id}`} className="btn btn-secondary">View</Link>
                         <Link to={`../edit/${product.id}`} className="btn btn-primary mx-3">Edit</Link>
                         <Button className='custom-btn' variant="danger" onClick={handleDeleteProduct.bind(this, product.id)}>Delete</Button>
                     </div>
@@ -33,7 +35,7 @@ function ViewAll(props) {
   
     return (
       <>
-      <h1>Products</h1>
+      <Outlet />
       <Row>
         <CardGroup>
             <ProductContext.Consumer>
@@ -43,7 +45,6 @@ function ViewAll(props) {
             </ProductContext.Consumer>
         </CardGroup>
       </Row>
-      
       </>
     )
   }

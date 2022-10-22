@@ -18,9 +18,9 @@ function SampleItems(props) {
                 <Card.Body>
                     <Card.Img className='sample-images' src={require(`${product.imageUrl}`)} />
                     <Card.Title>{product.productName}</Card.Title>
-                    <Card.Subtitle className="mb-2 text-muted"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Subtitle>
+                    <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Text>
                     <div className='buttons'>
-                        <Link className="btn btn-secondary">View</Link>
+                        <Link to={`/products/${product.id}`} className="btn btn-secondary">View</Link>
                         <Link to={`edit/${product.id}`} className="btn btn-primary mx-3">Edit</Link>
                         <Button className='custom-btn' variant="danger" onClick={handleDeleteProduct.bind(this, product.id)}>Delete</Button>
                     </div>

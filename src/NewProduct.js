@@ -12,12 +12,12 @@ function NewProduct() {
     description: "",
     price: "",
     imageUrl: "",
-    isUsed: ""
+    condition: ""
   })
 
   let { getProduct, updateProduct, addProduct } = useContext(ProductContext)
   let navigate = useNavigate()
-  let { id, productName, description, price, imageUrl, isUsed } = product
+  let { id, productName, description, price, imageUrl, condition } = product
 
   useEffect(() => {
     if (id === undefined) return
@@ -60,7 +60,7 @@ function NewProduct() {
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Is this item used?</Form.Label>
-        <Form.Control type="text" name="isUsed" value={isUsed} onChange={handleChange} />
+        <Form.Control type="text" name="condition" value={condition} onChange={handleChange} />
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Price</Form.Label>

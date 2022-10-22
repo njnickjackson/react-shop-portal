@@ -5,6 +5,7 @@ import ViewAll from './ViewAll';
 import NewProduct from './NewProduct';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SampleItems from './SampleItems';
+import ProductDetails from './ProductDetails';
 
 function App() {
   return (
@@ -13,7 +14,10 @@ function App() {
         <Route path="/" element={<Home />}>
           <Route index element={<SampleItems />}/>
           <Route path="about" element={<About />} />
-          <Route path="products" element={<ViewAll />} />
+          <Route path="products" element={<ViewAll />}>
+            <Route index element={<h1>Products</h1>}/>
+            <Route path=":productId" element={<ProductDetails />} />
+          </Route>
           <Route path="add" element={<NewProduct />} />
           <Route path="edit/:productId" element={<NewProduct />} />
         </Route>
