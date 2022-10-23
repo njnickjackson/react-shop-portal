@@ -59,7 +59,7 @@ function NewProduct() {
         <Form.Control type="text" name="description" value={description} onChange={handleChange} />
       </Form.Group>
       <Form.Group className="mb-3" >
-        <Form.Label>Is this item used?</Form.Label>
+        <Form.Label>What is the condition?</Form.Label>
         <Form.Control type="text" name="condition" value={condition} onChange={handleChange} />
       </Form.Group>
       <Form.Group className="mb-3" >

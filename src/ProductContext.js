@@ -19,6 +19,13 @@ export const ProductProvider = (props) => {
             setProducts(response.data)
           })
       }
+
+      function searchProducts(search) {
+        return axios.get(`http://localhost:3001/products?q=${search}`)
+          .then(response => {
+            setProducts(response.data)
+          })
+      }
     
       function getProduct(id) {
         return products.find(product => product.id === parseInt(id))
@@ -53,7 +60,8 @@ export const ProductProvider = (props) => {
             getProduct,
             deleteProduct,
             addProduct,
-            updateProduct
+            updateProduct,
+            searchProducts
           }}
         >
           {props.children}
