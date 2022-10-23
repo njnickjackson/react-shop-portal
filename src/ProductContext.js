@@ -5,6 +5,7 @@ export const ProductContext = createContext()
 
 export const ProductProvider = (props) => {
     const [products, setProducts] = useState([])
+    const [searchResults, setSearchResults] = useState("")
 
     useEffect(() => {
         async function getProducts() {
@@ -23,7 +24,7 @@ export const ProductProvider = (props) => {
       function searchProducts(search) {
         return axios.get(`http://localhost:3001/products?q=${search}`)
           .then(response => {
-            setProducts(response.data)
+            setSearchResults(response.data)
           })
       }
     
@@ -57,6 +58,8 @@ export const ProductProvider = (props) => {
         <ProductContext.Provider
           value={{
             products,
+            searchResults,
+            setSearchResults,
             getProduct,
             deleteProduct,
             addProduct,

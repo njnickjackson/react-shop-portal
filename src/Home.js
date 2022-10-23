@@ -15,36 +15,13 @@ function Home() {
     const submitSearch = (event) => {
       event.preventDefault()
       searchProducts(search)
-      navigate("/products")
+      navigate("/searchResults")
     }
 
-    const refreshProductsPage = () => {
-      if (search) {
-        refreshProductsPage("/products")
-        setSearch("")
-      }
+    const clearSearch = () => {
+      setSearch("")
     }
 
-    const refreshHomePage = () => {
-      if (search) {
-        refreshHomePage("/")
-        setSearch("")
-      }
-    }
-
-    const refreshAboutPage = () => {
-      if (search) {
-        refreshAboutPage("/about")
-        setSearch("")
-      }
-    }
-
-    const refreshCreatePage = () => {
-      if (search) {
-        refreshCreatePage("/add")
-        setSearch("")
-      }
-    }
 
     return (
         <>
@@ -55,10 +32,10 @@ function Home() {
                 <Navbar.Text className="ms-3">Riverside Components</Navbar.Text>
             </Nav>
             <Nav>
-              <Link to="/" onClick={refreshHomePage} className="nav-link">Home</Link>
-              <Link to="about" onClick={refreshAboutPage} className="nav-link">About Us</Link>
-              <Link to="products" onClick={refreshProductsPage} className="nav-link">View All</Link>
-              <Link to="add" onClick={refreshCreatePage} className="nav-link">Create</Link>
+              <Link to="/" onClick={clearSearch} className="nav-link">Home</Link>
+              <Link to="about" onClick={clearSearch} className="nav-link">About Us</Link>
+              <Link to="products" onClick={clearSearch} className="nav-link">View All</Link>
+              <Link to="add" onClick={clearSearch} className="nav-link">Create</Link>
               <Form onSubmit={submitSearch}>
                   <Form.Control
                     type="search"
