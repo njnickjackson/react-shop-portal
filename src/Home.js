@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Container, Nav, Navbar, Stack, Form, Image } from "react-bootstrap";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { ProductContext } from './ProductContext';
+import './css/Home.css';
 
 function Home() {
     const [search, setSearch] = useState("")
@@ -24,7 +25,7 @@ function Home() {
 
 
     return (
-        <>
+        <div className="flex-wrapper">
         <Navbar bg="dark" variant="dark">
           <Container >
             <Nav>
@@ -52,7 +53,8 @@ function Home() {
         <Stack gap={3} className="col-md-10 mx-auto mt-3">
           <Outlet />
         </Stack>
-      </>
+        <div className="footer bg-dark">Ⓒ 2022 Riverside Components - Powered by Nicholas Jackson</div>
+      </div>
     )
 }
 
