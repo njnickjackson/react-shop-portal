@@ -26,7 +26,7 @@ function ProductDetails(props) {
     return (
       <Card className="align-self-start w-25">
         <Card.Body>
-          <Card.Img className='sample-images' src={require(`${imageUrl}`)} />
+          <Card.Img className='sample-images' src={imageUrl} />
           <Card.Title>{productName}</Card.Title>
           <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${price}`}</span></Card.Text>
           <Card.Text>

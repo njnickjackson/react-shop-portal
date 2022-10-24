@@ -16,7 +16,7 @@ function Search() {
     <Col md={4}>
       <Card className='m-2'>
               <Card.Body>
-                  <Card.Img className='sample-images' src={require(`${searchResults[product].imageUrl}`)} />
+                  <Card.Img className='sample-images' src={searchResults[product].imageUrl} />
                   <Card.Title>{searchResults[product].productName}</Card.Title>
                   <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${searchResults[product].price}`}</span></Card.Text>
                   <div className='buttons'>

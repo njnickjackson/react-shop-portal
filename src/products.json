@@ -6,7 +6,7 @@
       "description": "2021 Macbook Pro Brand New",
       "condition": "New in Box",
       "price": 2500,
-      "imageUrl": "./images/macbook-pro.jpg"
+      "imageUrl": "/images/macbook-pro.jpg"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "description": "2021 iPad Pro Brand New",
       "condition": "New in Box",
       "price": 1200,
-      "imageUrl": "./images/ipad-pro.jpg"
+      "imageUrl": "/images/ipad-pro.jpg"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "description": "Gently Used Xbox One Elite",
       "condition": "Minor wear and tear",
       "price": 150,
-      "imageUrl": "./images/xbox-one.jpg"
+      "imageUrl": "/images/xbox-one.jpg"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "description": "2020 Dodge Challenger (15,354 miles)",
       "condition": "New tires and breaks, beautiful car",
       "price": 40000,
-      "imageUrl": "./images/dodge-challenger.jpg"
+      "imageUrl": "/images/dodge-challenger.jpg"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "description": "Premium Pioneer DJ Mixer Brand New",
       "condition": "New in Box",
       "price": 800,
-      "imageUrl": "./images/dj-mixer.jpg"
+      "imageUrl": "/images/dj-mixer.jpg"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "description": "Gently Used OLED Nintendo Switch",
       "condition": "Minor wear and tear",
       "price": 275,
-      "imageUrl": "./images/nintendo-switch.jpg"
+      "imageUrl": "/images/nintendo-switch.jpg"
     }
   ]
 }
