@@ -16,7 +16,7 @@ function SampleItems(props) {
       return products.filter((product, index) => index < 3).map((product) => 
             <Card className='m-2'>
                 <Card.Body>
-                    <Card.Img className='sample-images' src={require(`${product.imageUrl}`)} />
+                    <Card.Img className='sample-images' src={product.imageUrl} />
                     <Card.Title>{product.productName}</Card.Title>
                     <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Text>
                     <div className='buttons'>

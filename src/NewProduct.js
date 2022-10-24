@@ -68,7 +68,7 @@ function NewProduct() {
       </Form.Group>
       <Form.Group className="mb-3" >
         <Form.Label>Image</Form.Label>
-        <Form.Control type="text" name="imageUrl" value={imageUrl} onChange={handleChange} placeholder="type of an image URL"/>
+        <Form.Control type="text" name="imageUrl" value={imageUrl} onChange={handleChange} placeholder="type an image URL"/>
       </Form.Group>
       <Button type="submit">Save</Button>
     </Form>

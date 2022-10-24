@@ -19,7 +19,7 @@ function ViewAll(props) {
       <Col md={4}>
         <Card className='m-2'>
                 <Card.Body>
-                    <Card.Img className='sample-images' src={require(`${product.imageUrl}`)} />
+                    <Card.Img className='sample-images' src={product.imageUrl} />
                     <Card.Title>{product.productName}</Card.Title>
                     <Card.Text className="mb-2"><strong>Price:</strong> <span>{`$${product.price}`}</span></Card.Text>
                     <div className='buttons'>

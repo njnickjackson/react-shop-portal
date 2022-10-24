@@ -5,7 +5,7 @@ function About() {
     return (
         <div className="about-page">
             <div className="company-image">
-                <img src={require('./images/company-building.jpg')} alt="the company meeting room" />
+                <img src={'/images/company-building.jpg'} alt="the company meeting room" />
             </div>
             <div className="company-statement">
                 <h2>Welcome to our Company!</h2>

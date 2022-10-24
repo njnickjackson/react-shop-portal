@@ -29,7 +29,7 @@ function Home() {
         <Navbar bg="dark" variant="dark">
           <Container >
             <Nav>
-                <Image src={require('./images/rubiks-cube.png')} height="32" roundedCircle />
+                <Image src={"images/rubiks-cube.png"} height="32" roundedCircle />
                 <Navbar.Text className="ms-3">Riverside Components</Navbar.Text>
             </Nav>
             <Nav>
