@@ -1,4 +1,4 @@
-const jsonServer = require("json-server");
+const jsonServer = require("mock-server");
 const server = jsonServer.create();
 const router = jsonServer.router("./products.json");
 const middlewares = jsonServer.defaults({
