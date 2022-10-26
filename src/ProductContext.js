@@ -6,7 +6,6 @@ export const ProductContext = createContext()
 export const ProductProvider = (props) => {
     const [products, setProducts] = useState([])
     const [searchResults, setSearchResults] = useState("")
-    const JSON_API = "https://react-shop-inventory.herokuapp.com/api"
 
     useEffect(() => {
         async function getProducts() {
@@ -15,15 +14,8 @@ export const ProductProvider = (props) => {
         getProducts()
       }, [])
     
-      // function refreshProducts() {
-      //   return axios.get("http://localhost:3001/products")
-      //     .then(response => {
-      //       setProducts(response.data)
-      //     })
-      // }
-
       function refreshProducts() {
-        return axios.get(JSON_API)
+        return axios.get("http://localhost:3001/products")
           .then(response => {
             setProducts(response.data)
           })
