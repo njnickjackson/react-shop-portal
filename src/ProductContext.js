@@ -7,6 +7,8 @@ export const ProductProvider = (props) => {
     const [products, setProducts] = useState([])
     const [searchResults, setSearchResults] = useState("")
 
+    let baseUrl = `http://localhost:3001/products`;
+
     useEffect(() => {
         async function getProducts() {
           await refreshProducts()
@@ -15,14 +17,14 @@ export const ProductProvider = (props) => {
       }, [])
     
       function refreshProducts() {
-        return axios.get("http://localhost:3001/products")
+        return axios.get(baseUrl)
           .then(response => {
             setProducts(response.data)
           })
       }
 
       function searchProducts(search) {
-        return axios.get(`http://localhost:3001/products?q=${search}`)
+        return axios.get(`${baseUrl}?q=${search}`)
           .then(response => {
             setSearchResults(response.data)
           })
@@ -33,12 +35,12 @@ export const ProductProvider = (props) => {
       }
     
       function deleteProduct(id) {
-        axios.delete(`http://localhost:3001/products/${id}`)
+        axios.delete(`${baseUrl}/${id}`)
         .then(refreshProducts)
       }
     
       function addProduct(product) {
-        return axios.post("http://localhost:3001/products", product)
+        return axios.post(`${baseUrl}`, product)
         .then(response => {
           refreshProducts()
           return new Promise((resolve) => resolve(response.data))
@@ -46,7 +48,7 @@ export const ProductProvider = (props) => {
       }
     
       function updateProduct(product) {
-        return axios.put(`http://localhost:3001/products/${product.id}`, product)
+        return axios.put(`${baseUrl}/${product.id}`, product)
         .then(response => {
           refreshProducts()
           return new Promise((resolve) => resolve(response.data))
