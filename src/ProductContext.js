@@ -7,7 +7,7 @@ export const ProductProvider = (props) => {
     const [products, setProducts] = useState([])
     const [searchResults, setSearchResults] = useState("")
 
-    let baseUrl = `http://localhost:3001/products`;
+    let baseUrl = `https://react-shop-inventory.herokuapp.com/products`;
 
     useEffect(() => {
         async function getProducts() {
